@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <style>
+            table, tr {
+                border: 2px solid white;
+            }
+        </style>
+        <title>Online Self Practice</title>
+    </h:head>
+    <h:body>
+        <table border="0" bgcolor="#808080" align="top" width="100%" style="height:90px">
+            <tr>
+                <td align="left" width="180">
+                    <img alt=""  src="images/icon.png" width="250" height="150" align="right"/>
+                </td>
+                <td bgcolor="skyblue" align="center"> 
+                    <p style="font-family: 'SHOWCARD GOTHIC',sans-serif; font-size: 35pt; font-stretch: expanded; color: green">Online Self Practice®
+                    </p>
+                </td>
+                
+            </tr>
+        </table>
+        <table align="left" width="100%" style="height:450px">
+            <tr>
+                <td style=" font-family:verdana; text-decoration: none;color:black ; font-size: large; " bgcolor="skyblue"  width="20%" valign="top" align="center"> <br/>
+                    <h:form>
+                        <h:commandLink action="index" value="About Us"/><br/><br/>
+                        <h:commandLink action="admin" value="Admin Frame"/><br/><br/>
+                        <h:commandLink action="registrationForm"  value="Registration"/><br/><br/>
+                        <h:commandLink action="onlinePractice" value="Online Practice"/><br/><br/>
+                    </h:form>
+                    <br/><br/><br/>
+                    <table  cellspacing="0.5" border="1" align="center" width="100%" bgcolor="FFFFF" style="height: 130px">
+                        <tr>
+                            <td bgcolor="skyblue"><p style="color: floralwhite;">Account Login</p></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="skyblue">
+                                
+                                    <h:form>
+                                        <h:panelGrid columns="2" >
+                                            <h:outputLabel value="User Name:" style="color: floralwhite  "/>
+                                            <h:inputText value="#{bean.userName}" validatorMessage="">
+                                                <f:validateRequired/>
+                                            </h:inputText>
+                                            
+                                            <h:outputLabel value="Password" style="color: floralwhite"/>
+                                            <h:inputSecret maxlength="15" value="#{bean.password}" validatorMessage="">
+                                                <f:validateRequired/>
+                                            </h:inputSecret>
+                                            <h:commandButton action="#{bean.checkStudent}" value="Submit"/><br/>
+                                        </h:panelGrid>
+                                        
+                                    </h:form>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="center"  bgcolor="white" width="50%" style="vertical-align: top; font-size: 2em;color: black;">
+                    <h:form>
+                        <h2>Modified successfully...</h2>
+                        do u wanna <h:commandLink value="modify more" action="modifyQues"/> ?
+                    </h:form>
+                </td>
+                <td align="center" width="30%" bgcolor="skyblue">
+                    <p style="color: floralwhite; font-size: 13pt; font-family: cursive">
+                        What is special on our website?</p><br/>
+                    <p align="Left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite;">
+                        * Include massive data to practice<br/>
+                        * Provide free exercises<br/>
+                        * Union groups<br/>
+                    </p>
+                    <hr noshade="" size="1"/>
+                    <p style="color: floralwhite; font-size: 13pt; font-family: cursive">
+                        Join the online training now
+                    </p>
+
+                    <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite">
+                        * Get 20% discount<br/>
+                        * Get materials free worth $20<br/>
+                    </p>
+
+                    <hr noshade="" size="1"/>
+
+                    <p style="color: floralwhite; font-size: 13pt; font-family: cursive">
+                        Students service
+                    </p>
+
+                    <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite">
+                        * Any doubts about the practices on our websites can be solved.<br/>
+                        * Each student can get an individual directing.<br/>
+                        * Combination with companies about programs.<br/>
+                        * Multiple lessons design.<br/>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+</html>
+
